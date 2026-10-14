@@ -1,0 +1,12 @@
+project: savantenvs/xlsx
+target: process_cell-mined-544d51d
+# seed-from: https://app.mayhem.security/savantenvs/xlsx/process_cell
+
+# Starter seeds: the harness parses xlsx (zip) input, which is format-gated at
+# the header — seed with small valid workbooks from the repo's own fixtures.
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/process_cell-mined-544d51d/testsuite
+
+cmds:
+  - cmd: /mayhem/process_cell
